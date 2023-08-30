@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Lista Tareas</string>
     <string name="title_activity_listado">ListadoActivity</string>
+    <string name="title_activity_crear">CrearActivity</string>
 </resources>

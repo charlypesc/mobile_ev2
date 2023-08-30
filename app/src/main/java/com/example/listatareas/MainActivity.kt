@@ -47,7 +47,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
         setContent {
             PantallaInicio()
         }
@@ -62,16 +61,19 @@ class MainActivity : ComponentActivity() {
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
+
             Button(onClick = {
-                val intento = Intent(contexto, ListadoActivity::class.java)
+                val intento = Intent(contexto, CrearActivity::class.java)
                 contexto.startActivity(intento)
             }) {
-                Text("Listado de Compras")
+                Text("Crear")
+
             }
             Button(onClick = {
-
+                val intent = Intent(contexto, ListadoActivity::class.java)
+                contexto.startActivity(intent)
             }) {
-                Text("Crear")
+                Text("Listado")
             }
         }
     }

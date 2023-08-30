@@ -13,6 +13,11 @@
         android:theme="@style/Theme.ListaTareas"
         tools:targetApi="31">
         <activity
+            android:name=".CrearActivity"
+            android:exported="false"
+            android:label="@string/title_activity_crear"
+            android:theme="@style/Theme.ListaTareas" />
+        <activity
             android:name=".ListadoActivity"
             android:exported="false"
             android:label="@string/title_activity_listado"
