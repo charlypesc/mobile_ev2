@@ -139,13 +139,14 @@ fun TareaItemUI(tarea:Tarea, onSave:() -> Unit = {}){
                         dao.actualizar(tarea)
                         onSave()
                     }
-                }
+                }, tint = Color.Green
             )
         }else{
             Icon(
                 Icons.Filled.Add,
                 contentDescription = "Tarea pendiente",
-                modifier = Modifier.clickable {
+                modifier = Modifier
+                    .clickable {
                     alcanceCorrutina.launch(Dispatchers.IO ){
                         val dao = AppDataBase.getInstance( contexto).tareaDao()
                         tarea.realizada=true
@@ -170,7 +171,7 @@ fun TareaItemUI(tarea:Tarea, onSave:() -> Unit = {}){
                     dao.eliminar(tarea)
                     onSave()
                 }
-            }
+            }, tint = Color.Red
         )
 
     }
